@@ -20,13 +20,16 @@ public:
 	
 	/** Create the creep by their types */
 	static Creep* createWithType(CreepType creepType,int wayPointNum,bool inverse);
-
+    CCProgressTimer* lifeBar;
+    Sprite* emptyLifeBar;
     bool inverse;
-	int curHp;   
+	int curHp;
+    int maxHp;
 	int moveDuration;  
 	int curWaypoint;  
 	int tag;   
 	int wayPointNum;
+    int bonusMoney;
 	Sprite* sprite;
 	virtual bool init(); 
 	Creep* initWithCreep(Creep* copyFrom);  

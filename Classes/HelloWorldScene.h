@@ -2,7 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
-#include "extensions/cocos-ext.h"
+#include "../extensions/cocos-ext.h"
 #include "ui/CocosGUI.h"
 #include "CCScene.h"
 #include "SimpleAudioEngine.h"
@@ -31,11 +31,11 @@ public:
     Layout* widget;
     ImageView* selectTank;
     Button* startBtn;
-    Button* highScoreBtn;
+    Button* achievementBtn;
     
     void startEvent(Widget* target, ui::TouchEventType type);
     
-    void highScoreEvent(Widget* target, ui::TouchEventType type);
+    void achievementEvent(Widget* target, ui::TouchEventType type);
     
 };
 

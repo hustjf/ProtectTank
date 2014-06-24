@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="27" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tank" tilewidth="32" tileheight="32">
+  <image source="tank.jpg" width="1343" height="772"/>
+  <tile id="17">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="536">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="bg" width="27" height="20">
+  <data encoding="base64" compression="zlib">
+   eJyTZGJgkKQTpgcYCLvoEWbo4kJAMWEqi+OyyxooZkNlcUJhiMu95PiRkF243EuOH3HZRUswGOyiZR6AxSsuu6iZVmDxissuaqQVdLvR7SLVzcT4B5ddpKZvQnL0Sofo/qCnXfTAwxUAAE/QJJE=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="27" height="20">
+  <object name="Waypoint0" x="16" y="35" width="32" height="32"/>
+  <object name="Waypoint1" x="266" y="35" width="32" height="32"/>
+  <object name="Waypoint2" x="515" y="35" width="32" height="32"/>
+  <object name="Waypoint3" x="765" y="35" width="32" height="32"/>
+  <object name="Waypoint4" x="765" y="259" width="32" height="32"/>
+  <object name="Waypoint5" x="541" y="259" width="32" height="32"/>
+  <object name="Waypoint6" x="317" y="259" width="32" height="32"/>
+  <object name="Waypoint7" x="93" y="259" width="32" height="32"/>
+  <object name="Waypoint8" x="93" y="483" width="32" height="32"/>
+  <object name="Waypoint9" x="317" y="483" width="32" height="32"/>
+  <object name="Waypoint10" x="541" y="483" width="32" height="32"/>
+  <object name="Waypoint11" x="765" y="483" width="32" height="32"/>
+  <object name="Waypoint12" x="829" y="483" width="32" height="32"/>
+ </objectgroup>
+</map>

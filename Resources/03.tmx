@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="27" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tank" tilewidth="32" tileheight="32">
+  <image source="tank.jpg" width="1343" height="772"/>
+  <tile id="17">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="buildable" value="1"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+  <tile id="536">
+   <properties>
+    <property name="buildable" value="0"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="bg" width="27" height="20">
+  <data encoding="base64" compression="zlib">
+   eJyTZGJgkKQzpgUYSLuEgGLCRLgFXT0+OVxmWQPFbEiwC6YenxyyWdjchm4XuhpSwgyZj81t6OrR1ZBrF760QY48Le3CFb6kmkVMOOEKX0JmkWMXsWFIjF5SMblm4curxOYXYszBlR8IyWOzi5A5tA5DaoLBZBc98XAFAKJsIpk=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="27" height="20">
+  <object name="Waypoint0" x="16" y="483" width="32" height="32"/>
+  <object name="Waypoint1" x="155" y="483" width="32" height="32"/>
+  <object name="Waypoint2" x="294" y="483" width="32" height="32"/>
+  <object name="Waypoint4" x="573" y="483" width="32" height="32"/>
+  <object name="Waypoint5" x="573" y="323" width="32" height="32"/>
+  <object name="Waypoint6" x="573" y="163" width="32" height="32"/>
+  <object name="Waypoint8" x="349" y="163" width="32" height="32"/>
+  <object name="Waypoint9" x="349" y="291" width="32" height="32"/>
+  <object name="Waypoint10" x="221" y="291" width="32" height="32"/>
+  <object name="Waypoint12" x="93" y="163" width="32" height="32"/>
+  <object name="Waypoint13" x="93" y="35" width="32" height="32"/>
+  <object name="Waypoint14" x="215" y="35" width="32" height="32"/>
+  <object name="Waypoint16" x="458" y="35" width="32" height="32"/>
+  <object name="Waypoint18" x="701" y="35" width="32" height="32"/>
+  <object name="Waypoint19" x="701" y="163" width="32" height="32"/>
+  <object name="Waypoint20" x="701" y="291" width="32" height="32"/>
+  <object name="Waypoint21" x="765" y="291" width="32" height="32"/>
+  <object name="Waypoint22" x="829" y="291" width="32" height="32"/>
+  <object name="Waypoint3" x="434" y="483" width="32" height="32"/>
+  <object name="Waypoint7" x="461" y="163" width="32" height="32"/>
+  <object name="Waypoint15" x="336" y="35" width="32" height="32"/>
+  <object name="Waypoint17" x="579" y="35" width="32" height="32"/>
+  <object name="Waypoint11" x="93" y="291" width="32" height="32"/>
+ </objectgroup>
+</map>

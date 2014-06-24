@@ -22,6 +22,9 @@ public:
     std::unordered_multimap<float, float> buildedPoints;
 	GameHUD* _gameHUDLayer;
     Home* home;
+    int currentMoney;
+    Tower::TowerType towerType;
+    void clear();
 
 private:       
 	DataModel(){};         

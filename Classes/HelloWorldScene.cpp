@@ -82,8 +82,8 @@ bool HelloWorld::init()
     startBtn = dynamic_cast<Button*>(widget->getChildByName("startGameBtn"));
     startBtn->addTouchEventListener(this, toucheventselector(HelloWorld::startEvent));
 
-    highScoreBtn = dynamic_cast<Button*>(widget->getChildByName("highScoreBtn"));
-    highScoreBtn->addTouchEventListener(this, toucheventselector(HelloWorld::highScoreEvent));
+    achievementBtn = dynamic_cast<Button*>(widget->getChildByName("achievementBtn"));
+    achievementBtn->addTouchEventListener(this, toucheventselector(HelloWorld::achievementEvent));
     
     selectTank = dynamic_cast<ImageView*>(widget->getChildByName("selectTank"));
     
@@ -108,7 +108,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 void HelloWorld::startEvent(Widget* target, TouchEventType type)
 {
     if(type==TouchEventType::TOUCH_EVENT_ENDED){
-        selectTank->setPosition(Point(startBtn->getPositionX()-144, startBtn->getPositionY()));
+        selectTank->setPosition(Point(startBtn->getPositionX()-166, startBtn->getPositionY()));
         
 		auto replaceScene = TransitionFadeBL::create(2, StartScene::createScene());
         
@@ -116,9 +116,9 @@ void HelloWorld::startEvent(Widget* target, TouchEventType type)
 	}
 }
 
-void HelloWorld::highScoreEvent(Widget* target, TouchEventType type)
+void HelloWorld::achievementEvent(Widget* target, TouchEventType type)
 {
     if(type==TouchEventType::TOUCH_EVENT_ENDED){
-        selectTank->setPosition(Point(highScoreBtn->getPositionX()-144, highScoreBtn->getPositionY()));
+        selectTank->setPosition(Point(achievementBtn->getPositionX()-166, achievementBtn->getPositionY()));
 	}
 }

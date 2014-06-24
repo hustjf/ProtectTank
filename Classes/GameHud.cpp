@@ -1,7 +1,8 @@
 #include "GameHud.h"
 #include "DataModel.h" 
 
-GameHUD* GameHUD::_sharHUD;  
+GameHUD* GameHUD::_sharHUD;
+GameHUD* GameHUD::_toDeleteHUD;
 bool GameHUD::init() 
 {    
 	if (!Layer::init()) 
@@ -16,10 +17,10 @@ bool GameHUD::init()
 	background->setAnchorPoint(ccp(0, 0)); 
 	this->addChild(background); 
 	Vector<String*> images;  
-	images.pushBack(StringMake("p1tankD.png"));    
-	images.pushBack(StringMake("p1tankL.png"));    
-	images.pushBack(StringMake("p1tankR.png")); 
-	images.pushBack(StringMake("p1tankU.png"));
+	images.pushBack(StringMake("p1tankU.png"));    
+	images.pushBack(StringMake("p2tankU.png"));    
+	images.pushBack(StringMake("p1tankD41.png"));
+	images.pushBack(StringMake("p1tankD31.png"));
 	for (int i = 0; i < images.size(); ++i)    
 	{        
 		String* image = images.at(i);   
@@ -72,7 +73,8 @@ bool GameHUD::onTouchBegan(Touch *touch, Event *event)
 		float yMax = pos_rect.getMaxY();     
 		if (pos_rect.containsPoint(touchLocation))     
 		{        
-			DataModel *m = DataModel::getModel();     
+			DataModel *m = DataModel::getModel();
+            m->towerType = static_cast<Tower::TowerType>(i);
 			selSpriteRange = Sprite::create("Range.png");    
 			selSpriteRange->setScale(4);  
 			this->addChild(selSpriteRange, -1);    
@@ -131,7 +133,7 @@ void GameHUD::onTouchEnded(Touch* touch, Event* event)
 		if (!backgroundRect.containsPoint(touchLocation) && m->_gameLayer->canBuildOnTilePosition(touchLocation))  
 		{           
 			Point touchLocationInGameLayer = m->_gameLayer->convertTouchToNodeSpace(touch);   
-			m->_gameLayer->addTower(touchLocationInGameLayer);    
+			m->_gameLayer->addTower(touchLocationInGameLayer, m->towerType);
 		}         
 		this->removeChild(selSprite,true);  
 		selSprite = NULL;    

@@ -15,6 +15,7 @@
 #include "WayPoint.h"
 #include "Wave.h"
 #include "GameHud.h"
+#include "Tower.h"
 
 using namespace cocos2d::ui;
 USING_NS_CC;
@@ -37,7 +38,7 @@ public:
 	virtual void update(float dt);
 	Wave* getCurrentWave();
 	Wave* getNextWave();
-	void addTower(Point pos);
+	void addTower(Point pos, Tower::TowerType towerType);
 	Point tileCoordForPosition(Point position);
 	bool canBuildOnTilePosition(Point pos);
 	Point boundLayerPos(Point newPos);
@@ -45,10 +46,16 @@ public:
 	GameHUD* gameHUD;
     Vector<Creep*> targetsToDelete;
 
-    
 	cocos2d::TMXTiledMap* _tileMap;
 	cocos2d::TMXLayer* _background;
+    Text* money;
+    Text* life;
+    Text* currentWave;
+    Text* totalWave;
     
+    void restartEvent(Widget* target, ui::TouchEventType type);
+    void continueEvent(Widget* target, ui::TouchEventType type);
+    void mainMenuEvent(Widget* target, ui::TouchEventType type);
 };
 
 

@@ -9,3 +9,13 @@ DataModel* DataModel::getModel()
 	} 
 	return m_pInstance; 
 }
+
+void DataModel::clear()
+{
+//    if (GameHUD::_toDeleteHUD != NULL)
+//        delete GameHUD::_toDeleteHUD;
+//    GameHUD::_toDeleteHUD = GameHUD::_sharHUD;
+    GameHUD::_sharHUD = NULL;
+    delete m_pInstance;
+    m_pInstance = NULL;
+}

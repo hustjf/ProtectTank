@@ -8,7 +8,8 @@ public:
 	Sprite* selSpriteRange; 
 	Sprite* selSprite;     
 	Vector<Sprite*> movableSprites;    
-	static GameHUD* _sharHUD;    
+	static GameHUD* _sharHUD;
+    static GameHUD* _toDeleteHUD;
 	virtual bool init();   
 	static GameHUD* shareHUD(); 
 	CREATE_FUNC(GameHUD);   
